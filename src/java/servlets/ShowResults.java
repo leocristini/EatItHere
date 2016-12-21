@@ -71,7 +71,7 @@ public class ShowResults extends HttpServlet {
                         out.println("<tr>");
                         out.println("<ul><h1><a href=\"Profile?name="+tmp+"\" id=\"res_name\">"+searched_res.get(i).getName()+" </a></h1></ul>");
                         out.println("<ul> "+searched_res.get(i).getDescription()+" </ul>");
-                        out.println("<ul> "+searched_res.get(i).getCousineType()+" </ul>");
+                        
                         out.println("<ul><a href=\""+searched_res.get(i).getWebSiteUrl()+"\">"+searched_res.get(i).getWebSiteUrl()+"</a> </ul>");
                         out.println("</tr>");
                 }                

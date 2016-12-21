@@ -43,6 +43,14 @@
         <servlet-name>AddComment</servlet-name>
         <servlet-class>servlets.AddComment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddRestaurant</servlet-name>
+        <servlet-class>servlets.AddRestaurant</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>WeekSchedule</servlet-name>
+        <servlet-class>db_classes.WeekSchedule</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -70,6 +78,14 @@
     <servlet-mapping>
         <servlet-name>AddComment</servlet-name>
         <url-pattern>/AddComment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddRestaurant</servlet-name>
+        <url-pattern>/AddRestaurant</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>WeekSchedule</servlet-name>
+        <url-pattern>/WeekSchedule</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -7,6 +7,7 @@ package servlets;
 
 import db_classes.DBManager;
 import db_classes.Restaurant;
+import db_classes.WeekSchedule;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -55,7 +56,7 @@ public class Profile extends HttpServlet {
                 
         out.println("<html><head><title>"+restName+"</title>");
         request.getRequestDispatcher("header.jsp").include(request, response);
-        
+        System.out.println("PORCODIO PORCO DIO PORCODDDDDIOOOOOOOOOOOOOOOO");
         Restaurant res_tmp = new Restaurant();
         res_tmp = manager.getRestaurant(restName);
         out.println("<div class=\"jumbotron\" id=\"jumbo-res\" background=\""+ res_tmp.getPhotoPath() +"\">");
@@ -92,10 +93,12 @@ public class Profile extends HttpServlet {
         out.println("<div class=col-md-2></div>");
         
         out.println("<div class=col-md-6>");
-        
+                System.out.println("PORCODIO PORCO DIO PORCODDDDDIOOOOOOOOOOOOOOOO");
+
         //qua descrizione
+        WeekSchedule week = res_tmp.getWeek();
         out.println(res_tmp.getDescription()
-        +"<br><h3>Oradi di apertura:</h3> "+res_tmp.getOpeningHours()
+        +"<br><h3>Oradi di apertura:</h3> "+week.toString()
         +"<br><h3>Prices:"//prendo la fascia di prezzo
         +"<br><h3>Where are we:<br></h3>");
         //qui andrebbe mappa
@@ -143,7 +146,8 @@ public class Profile extends HttpServlet {
 "        <script src=\"media/js/scripts.js\"></script>");
         
         out.println("</body></html>");
-        
+                System.out.println("PORCODIO MADONNAPUTTANA DIO PORCODDDDDIOOOOOOOOOOOOOOOO");
+
     }
 
     
